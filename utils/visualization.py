@@ -131,30 +131,36 @@ def create_history_chart(history_df: pd.DataFrame, is_dark: bool = True) -> go.F
 
     text_color = "white" if is_dark else "#1a1a2e"
 
+    df = history_df.dropna(subset=["final_marks"]).reset_index(drop=False)
+    if df.empty:
+        return None
+
+    marks = df["final_marks"].tolist()
+    students = df["student_name"].fillna("Unknown").tolist()
+    indices = df.index.tolist()
+
     fig = go.Figure()
 
     fig.add_trace(
         go.Scatter(
-            x=history_df.index,
-            y=history_df["final_marks"],
+            x=indices,
+            y=marks,
             mode="lines+markers",
             name="Predicted Marks",
             line=dict(color="#00d2ff", width=3),
             marker=dict(
                 size=10,
-                color=history_df["final_marks"],
-                colorscale="rdylgn",
+                color=marks,
+                colorscale="RdYlGn",
                 showscale=True,
                 colorbar=dict(
-                    title="Marks",
-                    titleside="right",
+                    title=dict(text="Marks", side="right", font=dict(color=text_color)),
                     tickfont=dict(color=text_color),
-                    titlefont=dict(color=text_color),
                 ),
                 line=dict(width=2, color=text_color),
             ),
             hovertemplate="<b>#%{x}</b><br>Marks: %{y:.1f}%<br>Student: %{customdata}<extra></extra>",
-            customdata=history_df["student_name"],
+            customdata=students,
         )
     )
 
