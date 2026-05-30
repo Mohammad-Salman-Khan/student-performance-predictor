@@ -1,0 +1,20 @@
+[browser]
+gatherUsageStats = false
+
+[server]
+maxUploadSize = 5
+enableXsrfProtection = true
+
+[theme]
+base = "dark"
+primaryColor = "#00d2ff"
+backgroundColor = "#0f0c29"
+secondaryBackgroundColor = "#1a153a"
+textColor = "#ffffff"
+font = "sans serif"
+
+[runner]
+fastReruns = true
+
+[global]
+developmentMode = false
