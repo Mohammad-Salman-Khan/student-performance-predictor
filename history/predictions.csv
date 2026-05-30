@@ -1,0 +1,4 @@
+timestamp,student_name,study_hours,attendance,previous_marks,final_marks,grade
+2026-05-30 17:44:39,salman,6.0,85.0,70.0,85.7,B
+2026-05-30 17:46:29,Riyaz,9.0,87.0,72.0,97.1,A
+2026-05-30 17:47:02,Mobeen,7.0,81.0,67.0,90.7,A

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+}
+
+.stApp {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+}
+
+.main-header {
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+}
+
+.main-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5, #00d2ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s ease-in-out infinite;
+    margin-bottom: 0.3rem;
+}
+
+@keyframes shimmer {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 200% center; }
+}
+
+.main-header p {
+    color: rgba(255,255,255,0.6);
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.input-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 1.8rem 2rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    margin-bottom: 1.5rem;
+}
+
+.input-card label {
+    color: rgba(255,255,255,0.85) !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+}
+
+.stTextInput input, .stNumberInput input {
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 12px !important;
+    color: white !important;
+    padding: 0.6rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.stTextInput input:focus, .stNumberInput input:focus {
+    border-color: #00d2ff !important;
+    box-shadow: 0 0 20px rgba(0,210,255,0.15) !important;
+}
+
+.stButton > button {
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5) !important;
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    padding: 0.7rem 2rem !important;
+    border-radius: 14px !important;
+    border: none !important;
+    width: 100%;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 20px rgba(0,210,255,0.25) !important;
+    letter-spacing: 0.5px;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,210,255,0.4) !important;
+}
+
+.result-card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 1rem;
+}
+
+.grade-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.grade-A { background: linear-gradient(135deg, #33cc33, #2eb82e); color: white; }
+.grade-B { background: linear-gradient(135deg, #99ff33, #7acc00); color: #1a1a1a; }
+.grade-C { background: linear-gradient(135deg, #ffcc00, #e6b800); color: #1a1a1a; }
+.grade-D { background: linear-gradient(135deg, #ffa64d, #ff8c00); color: white; }
+.grade-F { background: linear-gradient(135deg, #ff4d4d, #cc0000); color: white; }
+
+.history-card {
+    background: rgba(255,255,255,0.04);
+    border-radius: 16px;
+    padding: 1.2rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 0.8rem;
+}
+
+.history-card small {
+    color: rgba(255,255,255,0.5);
+}
+
+.history-card strong {
+    color: rgba(255,255,255,0.9);
+}
+
+div[data-testid="stMetricValue"] {
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    color: #00d2ff !important;
+}
+
+div[data-testid="stMetricLabel"] {
+    color: rgba(255,255,255,0.6) !important;
+    font-weight: 500 !important;
+}
+
+.stProgress > div > div > div {
+    background-image: linear-gradient(90deg, #00d2ff, #3a7bd5) !important;
+}
+
+.stDataFrame {
+    background: transparent !important;
+}
+
+div[data-testid="stDataFrame"] {
+    background: rgba(255,255,255,0.05) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.sidebar-header h3 {
+    color: white;
+    font-weight: 700;
+}
+
+footer {
+    display: none !important;
+}
